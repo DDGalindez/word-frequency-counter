@@ -11,7 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
      $wordFrequency = array_count_values($words);
      
-     
+    
+     if ($sortOrder == 'asc') {
+        asort($wordFrequency); 
+    } else {
+        arsort($wordFrequency); 
+    }
+    
 
     
 }
