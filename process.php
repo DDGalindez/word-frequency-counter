@@ -21,6 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $wordFrequency = array_slice($wordFrequency, 0, $limit, true);
     
     
+    echo "<h1>Word Frequency Result</h1>";
+    echo "<table border='1'>";
+    echo "<tr><th>Word</th><th>Frequency</th></tr>";
+    
+    foreach ($wordFrequency as $word => $count) {
+        if (!empty($word)) {
+            echo "<tr><td>" . htmlspecialchars($word) . "</td><td>" . $count . "</td></tr>";
+        }
+    }
+    
+    echo "</table>";
 
     
 }
