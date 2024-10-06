@@ -18,6 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         arsort($wordFrequency); 
     }
     
+    $wordFrequency = array_slice($wordFrequency, 0, $limit, true);
+    
+    
 
     
 }
